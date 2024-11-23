@@ -40,8 +40,8 @@ dials |>
       ) |>
       tibble::as_tibble() |>
       dplyr::distinct(
-        x = round(x, 2),
-        y = round(y, 2),
+        x = round(x, spec$round),
+        y = round(y, spec$round),
         .keep_all = TRUE
       ) |>
       tidyr::drop_na() |>

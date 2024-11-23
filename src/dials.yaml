@@ -3,10 +3,21 @@ andorra:
   formal: "Andorra"
   background: "#5aca87"
   terrain: "#153c25"
-  linewidth: 0.2
+  linewidth: 0.25
   shock: 50000
   aspect: 1.1
-  zoom: 9
+  round: 3
+  zoom: 10
+
+liechtenstein:
+  formal: "Liechtenstein"
+  background: "#ca5a5a"
+  terrain: "#3c1515"
+  linewidth: 0.25
+  shock: 50000
+  aspect: 0.65
+  round: 3
+  zoom: 10
 
 switzerland:
   formal: "Switzerland"
@@ -15,6 +26,7 @@ switzerland:
   linewidth: 0.25
   shock: 50000
   aspect: 1.65
+  round: 2
   zoom: 9
 
 austria:
@@ -24,6 +36,7 @@ austria:
   linewidth: 0.2
   shock: 50000
   aspect: 1.75
+  round: 2
   zoom: 9
 
 nepal:
@@ -33,9 +46,8 @@ nepal:
   linewidth: 0.1
   shock: 50000
   aspect: 1.75
+  round: 2
   zoom: 9
-  callout:
-    "Mt Everest": [86.9, 28.0]
 
 bhutan:
   formal: "Bhutan"
@@ -44,4 +56,5 @@ bhutan:
   linewidth: 0.25
   shock: 50000
   aspect: 1.65
+  round: 2
   zoom: 9
