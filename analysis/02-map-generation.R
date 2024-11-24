@@ -17,8 +17,6 @@ dials |>
 
     file_name <- glue::glue("data/{name}.Rds")
 
-    cli::cli_alert_success("Generating {spec$forma}")
-
     data <-
       readr::read_rds(
         here::here(file_name)

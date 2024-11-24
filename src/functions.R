@@ -1,4 +1,25 @@
 
+pull_bounds <- function(spec) {
+  # Loads boundaries from service
+
+  depth <- length(spec$formal) - 1
+
+  boundaries <-
+    rgeoboundaries::geoboundaries(
+      country = head(spec$formal, 1),
+      adm_lvl = glue::glue("adm{depth}")
+    )
+
+  if (depth == 0) {
+    return(boundaries)
+  }
+
+  boundaries |>
+    dplyr::filter(
+      shapeName == tail(spec$formal, 1)
+    )
+}
+
 transform_data <- function(
   data,
   spec,
@@ -65,7 +86,7 @@ generate_map <- function(
       )
     ) +
     ggplot2::labs(
-      caption = spec$formal
+      caption = tail(spec$formal, 1)
     )
 }
 

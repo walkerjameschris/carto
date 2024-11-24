@@ -7,6 +7,8 @@ library(elevatr)
 library(tidyverse)
 library(rgeoboundaries)
 
+source(here::here("src/functions.R"))
+
 dials <-
   yaml::read_yaml(
     here::here("src/dials.yaml")
@@ -18,9 +20,7 @@ dials |>
   purrr::iwalk(function(spec, name) {
     
     file_name <- glue::glue("data/{name}.Rds")
-    boundaries <- rgeoboundaries::geoboundaries(spec$formal)
-    
-    cli::cli_alert_success("{spec$formal} boundary collected")
+    boundaries <- pull_bounds(spec)
 
     data <-
       elevatr::get_elev_raster(
@@ -31,8 +31,6 @@ dials |>
       raster::as.data.frame(
         xy = TRUE
       )
-
-    cli::cli_alert_success("{spec$formal} raster collected")
     
     data |>
       purrr::set_names(
@@ -40,8 +38,8 @@ dials |>
       ) |>
       tibble::as_tibble() |>
       dplyr::distinct(
-        x = round(x, spec$round),
-        y = round(y, spec$round),
+        x = round(x, 2),
+        y = round(y / spec$round) * spec$round,
         .keep_all = TRUE
       ) |>
       tidyr::drop_na() |>
@@ -49,7 +47,4 @@ dials |>
         here::here(file_name),
         compress = "xz"
       )
-    
-    cli::cli_alert_success("Serialized {spec$formal}")
-
-  })
+  }, .progress = TRUE)

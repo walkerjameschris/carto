@@ -1,4 +1,14 @@
 
+california:
+  formal: ["United States", "California"]
+  background: "#253848"
+  terrain: "#586e80"
+  linewidth: 0.2
+  shock: 30000
+  aspect: 0.825
+  round: 0.05
+  zoom: 8
+
 andorra:
   formal: "Andorra"
   background: "#5aca87"
@@ -6,7 +16,7 @@ andorra:
   linewidth: 0.25
   shock: 50000
   aspect: 1.1
-  round: 3
+  round: 0.001
   zoom: 10
 
 liechtenstein:
@@ -16,7 +26,7 @@ liechtenstein:
   linewidth: 0.25
   shock: 50000
   aspect: 0.65
-  round: 3
+  round: 0.001
   zoom: 10
 
 switzerland:
@@ -26,7 +36,7 @@ switzerland:
   linewidth: 0.25
   shock: 50000
   aspect: 1.65
-  round: 2
+  round: 0.01
   zoom: 9
 
 austria:
@@ -36,7 +46,7 @@ austria:
   linewidth: 0.2
   shock: 50000
   aspect: 1.75
-  round: 2
+  round: 0.01
   zoom: 9
 
 nepal:
@@ -46,7 +56,7 @@ nepal:
   linewidth: 0.1
   shock: 50000
   aspect: 1.75
-  round: 2
+  round: 0.01
   zoom: 9
 
 bhutan:
@@ -56,5 +66,5 @@ bhutan:
   linewidth: 0.25
   shock: 50000
   aspect: 1.65
-  round: 2
+  round: 0.01
   zoom: 9
