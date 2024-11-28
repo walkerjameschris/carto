@@ -1,4 +1,14 @@
 
+maryland:
+  formal: ["United States", "Maryland"]
+  background: "#6f5c35"
+  terrain: "#ead453"
+  linewidth: 0.5
+  shock: 10000
+  aspect: 1.8
+  round: 0.02
+  zoom: 10
+
 california:
   formal: ["United States", "California"]
   background: "#253848"
@@ -9,51 +19,21 @@ california:
   round: 0.05
   zoom: 8
 
-andorra:
-  formal: "Andorra"
-  background: "#5aca87"
-  terrain: "#153c25"
-  linewidth: 0.25
-  shock: 50000
-  aspect: 1.1
-  round: 0.001
-  zoom: 10
-
-liechtenstein:
-  formal: "Liechtenstein"
-  background: "#ca5a5a"
-  terrain: "#3c1515"
-  linewidth: 0.25
-  shock: 50000
-  aspect: 0.65
-  round: 0.001
-  zoom: 10
+norway:
+  formal: "Norway"
+  background: "#00205b"
+  terrain: "#8390a9"
+  linewidth: 0.1
+  shock: 15000
+  aspect: 1
+  round: 0.05
+  zoom: 7
 
 switzerland:
   formal: "Switzerland"
-  background: "#417154"
-  terrain: "#104730"
+  background: "#ba0c2b"
+  terrain: "#ffffff"
   linewidth: 0.25
-  shock: 50000
-  aspect: 1.65
-  round: 0.01
-  zoom: 9
-
-austria:
-  formal: "Austria"
-  background: "#5aca87"
-  terrain: "#153c25"
-  linewidth: 0.2
-  shock: 50000
-  aspect: 1.75
-  round: 0.01
-  zoom: 9
-
-nepal:
-  formal: "Nepal"
-  background: "#e4cc98"
-  terrain: "#947534"
-  linewidth: 0.1
   shock: 50000
   aspect: 1.75
   round: 0.01

@@ -16,13 +16,14 @@ pull_bounds <- function(spec) {
 
   boundaries |>
     dplyr::filter(
-      shapeName == tail(spec$formal, 1)
+      shapeName %in% tail(spec$formal, 1)
     )
 }
 
 transform_data <- function(
   data,
   spec,
+  ...,
   x = x,
   y = y,
   tolerance = 0.02,
@@ -32,10 +33,11 @@ transform_data <- function(
   # contiguious terrain paths and shocks elevation
 
   data |>
-    dplyr::reframe(
+    dplyr::select(
       x = {{ x }},
       y = {{ y }},
-      elevation = {{ elevation }}
+      elevation = {{ elevation }},
+      ...
     ) |>
     dplyr::group_by(y) |>
     dplyr::arrange(x) |>
