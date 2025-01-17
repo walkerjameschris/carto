@@ -5,14 +5,14 @@ library(tidyverse)
 
 source(here::here("src/functions.R"))
 
-dials <-
+manifest <-
   yaml::read_yaml(
-    here::here("src/dials.yaml")
+    here::here("src/manifest.yaml")
   )
 
 #### Load Data ####
 
-dials |>
+manifest |>
   purrr::iwalk(function(spec, name) {
 
     file_name <- glue::glue("data/{name}.Rds")

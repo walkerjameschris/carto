@@ -19,16 +19,6 @@ california:
   round: 0.05
   zoom: 8
 
-norway:
-  formal: "Norway"
-  background: "#00205b"
-  terrain: "#8390a9"
-  linewidth: 0.1
-  shock: 15000
-  aspect: 1
-  round: 0.05
-  zoom: 7
-
 switzerland:
   formal: "Switzerland"
   background: "#ba0c2b"
