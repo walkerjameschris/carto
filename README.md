@@ -11,7 +11,7 @@ as `ggplot` graphics using a specification described in
 > `rgeoboundaries` is no longer on CRAN. If you try to run
 > this codebase, you may need to install it from GitHub.
 
-<img src="https://raw.githubusercontent.com/walkerjameschris/carto/main/img/switzerland.png" height="300" />
+<img src="https://raw.githubusercontent.com/walkerjameschris/carto/refs/heads/main/img/switzerland.png" height="300" />
 
 ## Contents
 
